@@ -20,7 +20,7 @@ const Theme = styled.a`
 function Phone({ telephoneNumber }) {
   return (
     <Theme href={`"tel:${telephoneNumber}"`}>
-      <FontAwesomeIcon className="icons" icon={faPhone} />
+      <FontAwesomeIcon className="icons" icon={faPhone} style={{ color: '#b70038' }} />
       {telephoneNumber}
     </Theme>
   );

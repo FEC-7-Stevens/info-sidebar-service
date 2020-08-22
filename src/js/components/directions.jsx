@@ -32,7 +32,11 @@ function Directions({
 
   return (
     <Theme href={queryString} target="_blank" rel="noreferrer">
-      <FontAwesomeIcon className="icons" icon={faDirections} />
+      <FontAwesomeIcon
+        className="icons"
+        icon={faDirections}
+        style={{ color: '#b70038' }}
+      />
       Get Directions
     </Theme>
   );

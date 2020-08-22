@@ -13,9 +13,9 @@ const ReviewBox = styled.section`
 
   & .rating {
     font-size: 28px !important;
+    font-weight: 450;
     letter-spacing: .086em;
     padding-bottom: 2px;
-    font-weight: bold !important;
     text-align: center;
   }
 

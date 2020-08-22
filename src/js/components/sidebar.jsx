@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 import Time from './time.jsx';
 import Address from './address.jsx';
@@ -14,7 +14,6 @@ class Sidebar extends React.Component {
     super(props);
     this.state = {
       clicked: false,
-      animate: false,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -23,13 +22,7 @@ class Sidebar extends React.Component {
     const { clicked } = this.state;
     this.setState({
       clicked: !clicked,
-      animate: true,
     });
-    setTimeout(() => {
-      this.setState({
-        animate: false,
-      });
-    }, 350);
   }
 
   render() {
@@ -47,7 +40,6 @@ class Sidebar extends React.Component {
     } = this.props;
 
     const {
-      animate,
       clicked,
     } = this.state;
 
@@ -61,7 +53,6 @@ class Sidebar extends React.Component {
               id={RestaurantID}
               handleClick={this.handleClick}
               clicked={clicked}
-              animate={animate}
             />
           </div>
           <div className="row">
@@ -110,18 +101,26 @@ const rotateUp = keyframes`
   }
 
   100% {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
 `;
 
 const rotateDown = keyframes`
   0% {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
 
   100% {
     transform: rotate(0deg);
   }
+`;
+
+const animationDown = css`
+  ${rotateDown} 250ms linear
+`;
+
+const animationUp = css`
+  ${rotateUp} 250ms linear
 `;
 
 const Wrapper = styled.section`
@@ -153,6 +152,11 @@ const Wrapper = styled.section`
   }
   margin-right: 40px;
   background: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 350;
+  font-size: 13px;
+  z-index: 50;
+
 
 
 
@@ -171,7 +175,7 @@ const Wrapper = styled.section`
     text-decoration: none;
     margin-top: 13px;
     margin-bottom: 13px;
-    font: 13.5px 'Calibre-Regular';
+    font: 10px;
     letter-space: .013em;
     @media (max-width: 960px) {
       width: 50%;
@@ -191,7 +195,7 @@ const Wrapper = styled.section`
   }
 
   & #inner .row .items .status {
-    font-size: 15px;
+    font-size: 13px;
     margin: 0px;
   }
 
@@ -203,13 +207,8 @@ const Wrapper = styled.section`
   & #inner .row .items .arrow {
     display: inline-block;
     margin-left: 5px;
-    ${(props) => (props.clicked ? )}
-    animation: ${rotateUp} 700ms linear infinite;
-    animation-play-state: paused;
-  }
-
-  & #inner .row .items .flip {
-    animation-play-state: running;
+    animation: ${(props) => (props.clicked ? animationUp : animationDown)};
+    animation-fill-mode: forwards;
   }
 
   & #inner .lastRow {

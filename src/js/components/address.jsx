@@ -57,7 +57,12 @@ class Address extends React.Component {
           zipCode={zipCode}
           clicked={clicked}
         />
-        <FontAwesomeIcon onClick={() => { this.delayedHandleClick(); }} className="icons" icon={faMapMarkerAlt} />
+        <FontAwesomeIcon
+          onClick={() => { this.delayedHandleClick(); }}
+          className="icons"
+          icon={faMapMarkerAlt}
+          style={{ color: '#b70038' }}
+        />
         <Theme onClick={() => { this.delayedHandleClick(); }}>{`  ${streetAddress}, ${city}, ${state}, ${zipCode}, USA`}</Theme>
       </div>
     );

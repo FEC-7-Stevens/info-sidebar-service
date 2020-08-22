@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const helpers = require('../../../convenience-functions/parseData.js');
 
-function Map({streetAddress, city, state, zipCode }) {
+function Map({ streetAddress, city, state, zipCode }) {
   const collectedProps = [];
   let queryString = null;
   if (streetAddress) {
@@ -20,7 +20,7 @@ function Map({streetAddress, city, state, zipCode }) {
       cookieFlags="samesite=none;secure"
       style={{ border: '0' }}
       src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDPIUHkZ4FNCluRm_Vbm-Hp3pjqg42-Anw
-      &q=${queryString}`}
+      &q=${queryString}?wmode=opaque`}
       allowFullScreen
     />
   );

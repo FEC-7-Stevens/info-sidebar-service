@@ -7,6 +7,7 @@ const helpers = require('../../../convenience-functions/parseData.js');
 
 const MainWrapper = styled.section`
   width: 70%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   max-width: 900px;
   @media (max-width: 960px) {
     width: auto;
@@ -30,7 +31,7 @@ const MainWrapper = styled.section`
     padding-left: 20px;
     letter-spacing: .086em;
     text-transform: uppercase;
-    font: 16px/24px 'Calibre-Semibold';
+    font: 24px;
     margin-top: 20px;
   }
 
@@ -38,7 +39,7 @@ const MainWrapper = styled.section`
   & .written-review {
     font-size: 18px;
     letter-spacing: .013em;
-    line-height: 24px;
+    line-height: 28px;
     padding-left: 20px;
     padding-top: 20px;
     padding-right: 20px;
@@ -73,7 +74,7 @@ const MainWrapper = styled.section`
     color: #101820;
     padding-top: 25px;
     padding-left: 20px;
-    font: 36px/44px 'Calibre-Medium';
+    font-size: 30px;
     letter-spacing: .086em;
     text-transform: uppercase;
     margin: 0;
@@ -81,7 +82,8 @@ const MainWrapper = styled.section`
 
   & .describes-restaurant {
     color: #656666;
-    font: 15px/24px 'Calibre-Regular';
+    font-size: 13px;
+    padding-top: 8px;
     letter-spacing: .013em;
     padding-left: 20px;
     margin-top: 0px;
@@ -93,11 +95,13 @@ const MainWrapper = styled.section`
     margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
+    padding-top: 9px;
   }
 
   & .categories {
     color: #656666;
-    font: 15px/24px 'Calibre-Regular';
+    font-size: 13px;
+    padding-top: 11px;
     letter-spacing: .013em;
     margin-bottom: 25px;
     text-decoration: none;
@@ -129,7 +133,7 @@ function RestaurantInfo({
       </div>
       <div className="horizontal-rule" />
       <div className="horizontal-rule" />
-      <img className="zagat-logo" alt="The Zagat Logo" src="http://localhost:3002/imgs/z-logo-icon-red.svg" />
+      <img className="zagat-logo" alt="The Zagat Logo" src="http://3.94.181.132/imgs/z-logo-icon-red.svg" />
       <div className="review-text">THE ZAGAT REVIEW</div>
       <Ratings
         foodRating={foodRating}

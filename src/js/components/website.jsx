@@ -23,7 +23,11 @@ const Theme = styled.a`
 function Website({ website }) {
   return (
     <Theme href={`${website}`}>
-      <FontAwesomeIcon className="icons" icon={faColumns} />
+      <FontAwesomeIcon
+        className="icons"
+        icon={faColumns}
+        style={{ color: '#b70038' }}
+      />
       {website}
     </Theme>
   );

@@ -18,10 +18,8 @@ function Time(props) {
     closing,
     id,
     clicked,
-    animate,
-    handleClick
+    handleClick,
   } = props;
-  // const { clicked, animate } = this.state;
 
   if (opening) {
     const today = new Date();
@@ -47,12 +45,13 @@ function Time(props) {
           className="icons"
           icon={faClock}
           onClick={() => handleClick()}
+          style={{ color: '#b70038' }}
         />
         { showOpenStatus}
         <FontAwesomeIcon
           icon={faCaretDown}
           onClick={() => handleClick()}
-          className={animate ? 'arrow flip' : 'arrow'}
+          className="arrow"
           // onAnimationEnd={() => this.setState({ animate: false })}
         />
       </div>
