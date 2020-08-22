@@ -80,6 +80,10 @@ const Button = styled.button`
   }
 `;
 
+const MapFrame = styled.section`
+  z-index: 600;
+`;
+
 function Modal({
   handleClick, restaurantName, streetAddress, city, state, zipCode, clicked, open
 }) {
@@ -99,17 +103,18 @@ function Modal({
           <Button>
             X
           </Button>
-          <iframe
-            title="restaurantModal"
-            width="100%"
-            height="175%"
-            cookieFlags="samesite=none;secure"
-            frameBorder="0"
-            style={{ 'z-index': '601' }}
-            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDPIUHkZ4FNCluRm_Vbm-Hp3pjqg42-Anw
-            &q=${queryString}`}
-            allowFullScreen
-          />
+          <MapFrame>
+            <iframe
+              title="restaurantModal"
+              width="100%"
+              height="175%"
+              cookieFlags="samesite=none;secure"
+              frameBorder="0"
+              src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDPIUHkZ4FNCluRm_Vbm-Hp3pjqg42-Anw
+              &q=${queryString}`}
+              allowFullScreen
+            />
+          </MapFrame>
         </Backdrop>
       )}
     </div>
