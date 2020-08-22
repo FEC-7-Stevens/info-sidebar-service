@@ -155,7 +155,6 @@ const Wrapper = styled.section`
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: 350;
   font-size: 13px;
-  z-index: 50;
 
 
 
