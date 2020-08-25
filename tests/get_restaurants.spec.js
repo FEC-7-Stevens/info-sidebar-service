@@ -24,5 +24,5 @@ describe('Gets the test endpoint', () =>
       .get(`/${dbTestId}/restaurants/${dbTestId}`)
       .then((response) => {
         expect(response.statusCode).toBe(200);
-        expect(response.body[0][0].Restaurant_Name).toBe('Test Company');
+        expect(response.body[0][0].Restaurant_Name).toBe(`Stevens' Kitchen`);
       })));

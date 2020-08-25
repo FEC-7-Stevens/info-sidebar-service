@@ -3,13 +3,13 @@ const db = require('./database-mysql/index.js');
 const helpers = require('./convenience-functions/randomData.js');
 
 module.exports.seedOne = () => {
-  const companyName = 'Test Company';
-  const website = faker.internet.url();
-  const streetAddress = faker.address.streetAddress();
-  const city = faker.address.city();
-  const state = faker.address.state();
-  const zip = faker.address.zipCode();
-  const phone = faker.phone.phoneNumber();
+  const companyName = `Stevens' Kitchen`;
+  const website = `http://stevenskitchen.com`;
+  const streetAddress = `505 California St`;
+  const city = `San Fransisco`;
+  const state = `California`;
+  const zip = 94104;
+  const phone = `415-345-7890`;
   const writtenReview = faker.lorem.words(80);
   const scoreOne = helpers.generateScore();
   const scoreTwo = helpers.generateScore();
@@ -18,8 +18,8 @@ module.exports.seedOne = () => {
   const end = helpers.closingHours();
   const averagePrice = faker.commerce.price();
   const singleSentenceDescriptor = faker.lorem.sentence();
-  const neighborhood = faker.lorem.words(1);
-  const typeOfFood = faker.lorem.words(1);
+  const neighborhood = `San Fran`;
+  const typeOfFood = `TexMex`;
   let idNumber;
 
   db.populateRestaurants(companyName, website, phone)
