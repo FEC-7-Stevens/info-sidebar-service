@@ -20,7 +20,7 @@ function Map({ streetAddress, city, state, zipCode }) {
       cookieFlags="samesite=none;secure"
       style={{ border: '0' }}
       src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDPIUHkZ4FNCluRm_Vbm-Hp3pjqg42-Anw
-      &q=${queryString}?wmode=opaque`}
+      &q=${queryString}`}
       allowFullScreen
     />
   );
