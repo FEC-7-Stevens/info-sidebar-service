@@ -129,13 +129,11 @@ const Wrapper = styled.section`
     width: auto;
     margin-left: 40px;
     margin-right: 40px;
-    padding-left: 72px;
     max-height: ${(props) => (props.clicked ? '400px' : '230px')}
   }
   @media (max-width: 600px) {
     max-height: 600px;
     padding-right:32px;
-    padding-left: 20px;
   }
   @media (min-width: 960px) {
     padding-left: 32px;
@@ -151,13 +149,10 @@ const Wrapper = styled.section`
     height: 1200px;
   }
   margin-right: 40px;
-  background: white;
+  background: #FAFAFA;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: 350;
   font-size: 13px;
-
-
-
 
   & #inner {
     display: flex;
@@ -166,7 +161,10 @@ const Wrapper = styled.section`
     position: -webkit-sticky;
     position: sticky;
     top: 20px;
-
+    background: white;
+    @media (min-width: 960px) {
+      padding: 20px;
+    }
   }
 
   & #inner .row {
