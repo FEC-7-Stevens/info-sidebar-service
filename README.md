@@ -1,13 +1,12 @@
-# Project Name
+# Sidebar Component
 
-> Project description
+> This project is for a restaurant ratings website. This component is particular renders on the right side and dynamically displays unique data about the restaurant.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/FEC-7-Stevens/tips-recommendations-service
+  - https://github.com/FEC-7-Stevens/photo-carousel-service
+  - https://github.com/FEC-7-Stevens/similar-restaurants-service
 
 ## Table of Contents
 
@@ -26,10 +25,13 @@
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
 - Node 6.13.0
-- etc
+- axios
+- mysql
+- react
+- sinon
+- styled-components
+- axios
 
 ## Development
 
